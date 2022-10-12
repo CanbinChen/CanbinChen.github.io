@@ -1,0 +1,43 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/CanbinChen/CanbinChen.github.io/main/data/Region%20PM2.5.csv"
+    },
+    "vconcat": [
+      {
+        "width": 750,
+        "height": 240,
+        "mark": "area",
+        "encoding": {
+          "x": {
+            "field": "total_year",
+            "type": "temporal",
+            "scale": {"domain": {"param": "seclection"}},
+            "axis": {"title": ""},
+            "timeUnit": "year"
+          },
+          "y": {"aggregate": "average", "field": "total_region", "type": "quantitative"}
+        }
+      },
+      {
+        "width": 750,
+        "height": 60,
+        "mark": "line",
+        "params": [
+          {
+            "name": "seclection",
+            "select": {"type": "interval", "encodings": ["x"]}
+          }
+        ],
+        "encoding": {
+          "x": {"field": "total_year", "type": "temporal", "timeUnit": "year"},
+          "y": {
+            "field": "total_region",
+            "type": "quantitative",
+            "axis": {"tickCount": 3, "grid": false}
+          }
+        }
+      }
+    ]
+  }
+    
