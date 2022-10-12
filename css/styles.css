@@ -1,3 +1,4 @@
+
 body *{
     font-family: 'Open Sans', sans-serif;
 }
@@ -12,12 +13,12 @@ h2 {
 }
 
 body {
-    background-image:url(../data/pm.jfif.crdownload) ;
+    background-image:url(../data/pm.jfif) ;
 }
 
 .page {
     width: 900px;
-    background-color: rgba(181, 172, 172, 0.817);
+    background-color: rgba(248, 245, 245, 0.854);
     margin: auto;
     padding: 100px;
     padding-top: 35px;
