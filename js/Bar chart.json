@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": { "text": "Countries PM2.5" },
   "data": {
-    "url": "https://raw.githubusercontent.com/CanbinChen/studio-2/main/Air%20Pollution.csv/data/Region%20PM2.5.csv"
+    "url": "https://raw.githubusercontent.com/CanbinChen/CanbinChen.github.io/main/data/Region%20PM2.5.csv"
     },
     "selection": {
     "continent_highlight": {
@@ -14,7 +14,7 @@
 
   "mark": "bar",
   "encoding": {
-    "x": {"field":"Air","type": "quantitative"},
+    "x": {"field":"Air","type": "quantitative", "title": "Air Pollution Level"},
     "y": { "field": "Region", "type": "nominal","sort":"-x"},
     "tooltip": [
       {"field": "Region", "type": "nominal", "title":"Region"},
